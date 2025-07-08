@@ -1,1 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@500&family=Beau+Rivage&display=swap');
 
+:root {
+  --cream: #FFFBF0;
+  --white: #FFFFFF;
+  --black: #000000;
+  --dark-orange: #D77330;
+  --light-orange: #FA8F25;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-color: var(--cream);
+  color: var(--black);
+  font-family: 'Aleo', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-family: 'Beau Rivage', sans-serif;
+  font-size: 95px;
+  margin: 0;
+}
