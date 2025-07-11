@@ -8,7 +8,8 @@
   --light-orange: #FA8F25;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -25,6 +26,7 @@ h2 {
   margin: 0;
 }
 
+/*VISIT US*/
 /* Info Section */
 .info-section {
   display: flex;
@@ -71,7 +73,90 @@ h2 {
   height: 400px;
 }
 
+/*FAQ*/
+.faq-section {
+  background-color: #FFFBF0;
+  padding: 4rem 5vw;
+  font-family: 'Aleo', sans-serif;
+  color: #000;
+}
 
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.faq-title {
+  font-family: 'Beau Rivage', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 2;
+  margin: 0;
+}
+
+.faq-header .line {
+  flex: 1;
+  height: 6px;
+  background-color: #D77330;
+  max-width: 250px;
+  border-radius: 4px;
+
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: #FFFBF0;
+  border: 2px solid #D77330;
+  padding: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question .arrow {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  background-color: #fff;
+  border: 1px solid #D77330;
+  border-top: none;
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+.faq-item.open .arrow {
+  transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/*GENERAL CSS*/
 /*Footer*/
 .site-footer {
   background-color: #4b2108;
@@ -91,7 +176,7 @@ h2 {
 .footer-icons a {
   color: #eee;
   text-decoration: none;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
@@ -156,13 +241,9 @@ h2 {
 .orange-line {
   width: 1250px;
   height: 6px;
-  background-color: #D77330; 
+  background-color: #D77330;
   margin: 0 auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 4px;
 }
-
-
-
-

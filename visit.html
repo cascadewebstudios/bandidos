@@ -53,7 +53,76 @@
 
     </section>
 
-    <div class="orange-line"></div>
+    <!--FAQ-->
+    <section class="faq-section">
+        <div class="faq-header">
+            <div class="line"></div>
+            <h2 class="faq-title">FAQs</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you do home delivery?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>We don't offer home delivery at the moment. We're all about serving up fresh food right from the
+                    truck! Come visit us in the person for the full experience.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Does the food truck change locations?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>Nope! We're parked at a fixed spot so you always know where to find us.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you have online ordering?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>We don't offer online ordering just yet. Swing by and place your order in person!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you accept credit cards or is it cash only?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>We accept both cash and card.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is there indoor seating available?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>Since we’re a food truck, seating is limited to nearby outdoor spots.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Do you have vegetarian or vegan options?
+                <span class="arrow">&#9662;</span>
+            </button>
+            <div class="faq-answer">
+                <p>Absolutely! Many of our dishes are vegetarian-friendly, and we’re happy to customize items to make
+                    them fully vegan.</p>
+            </div>
+        </div>
+    </section>
 
 
     <!--Footer-->
@@ -89,6 +158,16 @@
         Visit <a href="https://cascadewebstudios.org" target="_blank" rel="noopener">cascadewebstudios.org</a> for more
         information.
     </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+
 
 </body>
 
