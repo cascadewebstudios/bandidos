@@ -13,10 +13,111 @@
   <!-- Landing Section -->
   <section class="landing">
     <img src="media/cacti 1.png" alt="Large Cactus" class="cactus-image" />
-    <h1 class="visit-us-text">Visit Us</h1>
-    <p class="tagline">Redmond's Favorite Taco Truck</p>
+    <h1 class="visit-us-text">Menu</h1>
+    <p class="tagline">The Freshest and Tastiest Ingredients</p>
   </section>
   <div class="orange-line"></div>
+
+  <!-- Menu Body -->
+
+  <div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('signature')">Signature Menu</div>
+      <div class="tab" onclick="showTab('dinner')">Dinner Menu</div>
+      <div class="tab" onclick="showTab('fajita')">Fajita Menu</div>
+      <div class="tab" onclick="showTab('drinks')">Drinks</div>
+      <div class="tab" onclick="showTab('dessert')">Dessert</div>
+    </div>
+
+    <!-- Menu Sections -->
+    <div id="signature" class="menu-section active">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">STREET TACOS</span><span>$3ea</span>
+        </div>
+        <div class="item-desc">Corn tortillas with your choice of meat, onions, cilantro, and lime</div>
+      </div>
+    </div>
+
+    <div id="dinner" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CARNE ASADA PLATE</span><span>$12.99</span>
+        </div>
+        <div class="item-desc">Grilled steak with rice, beans, and tortillas</div>
+      </div>
+    </div>
+
+    <div id="fajita" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHICKEN FAJITAS</span><span>$11.49</span>
+        </div>
+        <div class="item-desc">Served sizzling with onions and bell peppers</div>
+      </div>
+    </div>
+
+    <div id="drinks" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">HORCHATA</span><span>$2.50</span>
+        </div>
+        <div class="item-desc">Sweet rice drink with cinnamon</div>
+      </div>
+    </div>
+
+    <div id="dessert" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHURROS</span><span>$3.00</span>
+        </div>
+        <div class="item-desc">Fried dough pastries with sugar and cinnamon</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slideshow -->
+
+  <div class="slider" id="slider">
+  <figure>
+    <img src="media/adobada_burrito.jpg" alt="Image 1">
+    <figcaption>Adobada Burrito</figcaption>
+  </figure>
+  <figure>
+    <img src="media/al_pastor_and_lengua_and_carne_asada.jpg" alt="Image 2">
+    <figcaption>Street Tacos</figcaption>
+  </figure>
+  <figure>
+    <img src="media/quesadilla_plate.jpg" alt="Image 3">
+    <figcaption>Quesadilla Plate</figcaption>
+  </figure>
+  <figure>
+    <img src="media/taco_meal_plate.jpg" alt="Image 4">
+    <figcaption>Taco Meal Plate</figcaption>
+  </figure>
+  <figure>
+    <img src="media/torta_with_al_pastor_and_abobada.jpg" alt="Image 5">
+    <figcaption>Torta</figcaption>
+  </figure>
+  <figure>
+    <img src="media/carne_asada_fries.jpg" alt="Image 6">
+    <figcaption>Carne Asada Fries</figcaption>
+  </figure>
+    <figure>
+    <img src="media/cheese_quesadilla.jpg" alt="Image 7">
+    <figcaption>Cheese Quesadilla</figcaption>
+  </figure>
+  <figure>
+    <img src="media/carne_asada_street_tacos.jpg" alt="Image 8">
+    <figcaption>Carne Asada Street Tacos</figcaption>
+  </figure>
+  <figure>
+    <img src="media/carnitas_taco_plate.jpg" alt="Image 9">
+    <figcaption>Carnitas Taco Plate</figcaption>
+  </figure>
+</div>
+
 
   <!--Footer-->
   <footer class="site-footer">
@@ -51,6 +152,45 @@
     Visit <a href="https://cascadewebstudios.org" target="_blank" rel="noopener">cascadewebstudios.org</a> for more
     information.
   </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.menu-section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    const slider = document.getElementById('slider');
+
+  function scrollSlider(direction) {
+    const scrollAmount = slider.offsetWidth / 2;
+    slider.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  let startX;
+
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slider.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = endX - startX;
+    if (Math.abs(diff) > 50) {
+      scrollSlider(diff < 0 ? 1 : -1);
+    }
+  });
+  </script>
 
 </body>
 
