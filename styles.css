@@ -247,3 +247,166 @@ h2 {
   margin-bottom: 2rem;
   border-radius: 4px;
 }
+
+/* MENU */
+
+  html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px 30px; 
+  background-color: #fffaf2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 12px 8px;
+  font-size: 16px;
+  position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #a14d2d;
+}
+
+.menu-section {
+  display: none;
+}
+
+.menu-section.active {
+  display: block;
+}
+
+.item {
+  margin-bottom: 24px;
+}
+
+.item-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; 
+  border-bottom: 1px dotted #555;
+  padding-bottom: 4px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.item-desc {
+  color: #555;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  
+  .container {
+    margin: 10px;
+    padding: 20px 16px; 
+  }
+
+  .tabs {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px 6px;
+  }
+
+  .item-line {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .item-line span:last-child {
+    margin-left: auto;
+    font-weight: normal;
+    margin-top: 0;
+  }
+
+  .item-desc {
+    font-size: 13px;
+  }
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+}
+
+.slider figure {
+  flex: 0 0 16.6%;  
+  margin: 0;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slider figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 0 0 12px 12px;
+}
+
+.slider figure:hover figcaption {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .slider figure {
+    flex: 0 0 33%;
+  }
+}
