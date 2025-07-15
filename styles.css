@@ -8,11 +8,19 @@
   --light-orange: #FA8F25;
 }
 
+*{
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: none;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   width: 100vw;
+  max-width: 100vw;
+  overflow: none;
   background-color: var(--cream);
   color: var(--black);
   font-family: 'Aleo', sans-serif;
@@ -22,8 +30,492 @@ html {
 
 h2 {
   font-family: 'Beau Rivage', sans-serif;
-  font-size: 95px;
+  font-size: clamp(3rem, 5vw, 7rem);
   margin: 0;
+  font-weight: 500;
+}
+
+p{
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+/* Nav Bar */
+nav {
+  position: fixed;
+  font-family: 'Aleo', 'sans-serif';
+  top: 20px;
+  left: 2.5%;
+  width: 95%;
+  border-radius: 500px;
+  font-size: clamp(1rem, 1vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.nav-logo{
+  font-family: 'Aleo', serif;
+  font-size: clamp(1.5rem, 1.2w, 2rem)
+}
+
+.nav-menu{
+  display: none;
+  margin-right: 5vw;
+}
+
+.nav-desktop-container{
+  display: flex;
+  margin-left: auto;
+  margin-right: 4vw;
+}
+
+
+.nav-links-desktop {
+  display: flex;
+  align-items: center;
+  gap: 8vw;
+}
+
+.nav-links-desktop a:hover{
+  color: #d5e2ed;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+nav.scrolled {
+  background-color: rgba(52, 37, 9, 0.6);
+  backdrop-filter: blur(10px);
+  border: white 0.5px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 10vh;
+}
+
+.nav-menu, .sidebar{
+  display: none;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .nav-links-desktop, .nav-button-desktop{
+    display: none;
+  }
+
+  .nav-menu {
+    display: block; 
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .sidebar .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: -40vw;
+    width: 30vw;
+    height: 100%;
+    background-color: #4b2108;
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 2000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar.active{
+    right: 0 !important;
+    display: block !important;
+  }
+
+  .close-sidebar{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .sidebar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .sidebar a:hover{
+    color: #d5e2ed;
+    text-decoration: none;
+  }
+}
+
+
+/* HOME PAGE */
+/* Hero section */
+.hero{
+  background-image: url('media/truck.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content{
+  text-align: center;
+  height: auto;
+}
+
+.hero h1{
+  font-size: clamp(1.5rem, 10vw, 6rem);
+  font-family: 'Beau Rivage', serif;
+  margin-bottom: 0px;
+  padding-bottom: none;
+  color: white;
+  padding: none;
+  margin: none;
+  font-weight: normal;
+}
+
+.hero p{
+  margin-top: -2.5vh;
+  padding: none;
+  color: white;
+  margin-bottom: 2.5vh;
+}
+
+.hero a{
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  background-color: var(--light-orange);
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  font-size: clamp(0.5rem, 0.75vw, 2rem);
+}
+
+/* About Section */
+.about{
+  height: auto;
+  display: flex;
+  padding: 7vh 4vw;
+  align-items: center;
+  max-height: 800px;
+}
+
+.about-img{
+  width: 45%;
+}
+
+.about img{
+  border-radius: 15px;
+  width: 90%;
+  object-fit: contain;
+}
+
+.about-content{
+  width: 50%;
+}
+
+.about .heading{
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 2vw, 4rem);
+}
+
+.about .line{
+  flex: 1;
+  height: 6px;
+  background-color: #D77330;
+  max-width: 250px;
+  border-radius: 4px;
+}
+
+.about p{
+  margin-top: 0vh;
+  margin-bottom: 4vh;
+  font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+}
+
+.about a{
+  text-decoration: none;
+  color: black;
+  border-radius: 25px;
+  background-color: var(--light-orange);
+  padding: 0.6rem 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.4rem);
+}
+
+@media (max-width: 700px){
+  .about{
+    flex-direction: column;
+    width: auto;
+  }
+
+  .about-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about img{
+    max-height: 40vh;
+    width: auto;
+  }
+
+  .about-content{
+    margin-top: 3vh;
+    width: 100%;
+  }
+}
+
+.best-bar{
+  width: 100%;
+  background-color: var(--dark-orange);
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4vw;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1.5vh 0px;
+}
+
+.best-content{
+  display: inline-block;
+  animation: bestbar 15s linear infinite;
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+}
+
+@keyframes bestbar{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+/* Popular Dishes Section */
+.popular-dishes{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.popular-heading{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  width: 80%;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.popular-heading .line{
+  flex: 1;
+  height: 6px;
+  background-color: #D77330;
+  max-width: 250px;
+  border-radius: 4px;
+}
+
+.dishes{
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.dish{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6vh;
+}
+
+.dish img{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1vh;
+}
+
+.dish .dish-title{
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.dish .dish-p{
+  margin: 0px;
+  color: #444;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+}
+
+@media (max-width: 600px){
+  .dishes{
+    flex-direction: column;
+    gap: 0.5vh;
+  }
+
+  .dish{
+    width: 90%;
+    flex-direction: row;
+    gap: 5vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: auto;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .dish img{
+    width: 35%;
+    object-fit: contain;
+    margin: 0px;
+  }
+
+  .dish-text{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .dish .dish-title{
+    font-size: 1rem;
+  }
+}
+
+/* Reviews */
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 8vh;
+
+}
+
+.reviews-heading{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  width: 80%;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.reviews-heading .line{
+  flex: 1;
+  height: 6px;
+  background-color: #D77330;
+  max-width: 250px;
+  border-radius: 4px;
+}
+
+.reviews-content{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+
+.reviews-track{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.reviews-row{
+  display: flex;
+  gap: 5vw;
+  width: max-content;
+  will-change: transform;
+  justify-content: flex-start;
+  height: auto;
+}
+
+.review{
+  flex: 0 0 auto;
+  height: auto;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  padding: 2% 3%;
+}
+
+.review:hover{
+  transform: scale(1.03);
+}
+
+.reviews-row:hover{
+  animation-play-state: paused;
+}
+
+.star{
+  color: gold;
+}
+
+.review-text{
+  font-size: clamp(0.8rem, 1.5vw, 1.4rem);
+  margin: 0px;
+  margin-top: 1.5vh;
+  margin-bottom: 0.5vh;
+}
+
+.review-name{
+  color: #333;
+  margin-bottom: auto;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 800px){
+  .review{
+    width: 50vw;
+  }
 }
 
 /*VISIT US*/
