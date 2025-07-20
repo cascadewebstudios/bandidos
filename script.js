@@ -1,54 +1,33 @@
-/* Nav Bar JS */
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger');
   const sidebar = document.getElementById('sidebar');
   const closeBtn = document.getElementById('close-sidebar');
+  const overlay = document.getElementById('overlay');
 
-  hamburger.addEventListener('click', () => {
+  function openSidebar() {
     sidebar.classList.add('active');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    const isClickInside = sidebar.contains(e.target) || hamburger.contains(e.target);
-    if (!isClickInside) {
-      sidebar.classList.remove('active');
-    }
-  });
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('nav-menu');
-  const sidebar = document.getElementById('sidebar');
-  const closeBtn = document.getElementById('close-sidebar');
-
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.add('active');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-  });
-
-  document.addEventListener('click', (e) => {
-    const isClickInside = sidebar.contains(e.target) || hamburger.contains(e.target);
-    if (!isClickInside) {
-      sidebar.classList.remove('active');
-    }
-  });
-});
-
-const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  document.addEventListener('click', (e) => {
+    const isClickInside = sidebar.contains(e.target) || hamburger.contains(e.target);
+    if (!isClickInside) {
+      closeSidebar();
+    }
+  });
 });
+
 
 /* Best Bar JS */
 document.addEventListener("DOMContentLoaded", () => {
