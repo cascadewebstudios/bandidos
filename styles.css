@@ -940,3 +940,97 @@ nav a {
     flex: 0 0 33%;
   }
 }
+
+/* Our Story Section */
+.our-story {
+  background-color: var(--cream);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #3a1e0e;
+}
+
+.story-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.story-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.story-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.award {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.award-text {
+  background-color: #f28c28;
+  color: white;
+  font-weight: bold;
+  padding: 16px 20px 16px 60px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  text-align: left;
+}
+
+.award-text .badge {
+  position: absolute;
+  left: -115px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: 120px;
+  z-index: 2;
+}
+
+
+
+
+.story-image img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: var(--cream);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mission-taco {
+  width: 160px;
+  margin-bottom: 1px;
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #3a1e0e;
+}
