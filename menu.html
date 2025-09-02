@@ -54,55 +54,340 @@
     <!-- Tabs -->
     <div class="tabs">
       <div class="tab active" onclick="showTab('signature')">Signature Menu</div>
-      <div class="tab" onclick="showTab('dinner')">Dinner Menu</div>
+      <div class="tab" onclick="showTab('meal_plates')">Meal Plates</div>
+      <div class="tab" onclick="showTab('dinner')">Dinner Plates</div>
       <div class="tab" onclick="showTab('fajita')">Fajita Menu</div>
-      <div class="tab" onclick="showTab('drinks')">Drinks</div>
-      <div class="tab" onclick="showTab('dessert')">Dessert</div>
+      <div class="tab" onclick="showTab('specials')">Specialty Meals</div>
+      <div class="tab" onclick="showTab('meats')">Meat Choices</div>
+      <div class="tab" onclick="showTab('desayunos')">Breakfast</div>
+      <div class="tab" onclick="showTab('desserts_drinks')">Desserts and Drinks</div>
     </div>
 
+    <div class="menu-subheader" id="menu-subheader"></div>
     <!-- Menu Sections -->
+
     <div id="signature" class="menu-section active">
       <div class="item">
         <div class="item-line">
-          <span class="item-title">STREET TACOS</span><span>$3ea</span>
+          <span class="item-title">STREET TACOS</span><span>$3.50 each</span>
         </div>
         <div class="item-desc">Corn tortillas with your choice of meat, onions, cilantro, and lime</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">BURRITOS</span><span>$14.00</span>
+        </div>
+        <div class="item-desc">A big flour tortilla filled with rice, beans, choice of meat, lettuce, pico, cheese, and sour cream</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">QUESADILLA</span><span>$14.00</span>
+        </div>
+        <div class="item-desc">A grilled flour tortilla stuffed with melted cheese, choice of meat, and topped with lettuce, pico, and sour cream</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">TORTAS</span><span>$15.00</span>
+        </div>
+        <div class="item-desc">Grilled French bread stuffed with beans, choice of meat, tomato, avocado, jalapeños, and mayo</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">TACO SALAD</span><span>$14.00</span>
+        </div>
+        <div class="item-desc">A crispy flour tortilla filled with choice of meat, lettuce, pico, cheese, and sour cream</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CARNE ASADA FRIES</span><span>$15.00</span>
+        </div>
+        <div class="item-desc">French fries topped with Carne Asada steak, melted cheese, pico de gallo, and sour cream</div>
+      </div>
+    </div>
+
+    <div id="meal_plates" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">TACO MEAL PLATE</span><span>$17.00</span>
+        </div>
+        <div class="item-desc">Three street tacos with rice and beans</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">QUESADILLA MEAL PLATE</span><span>$17.00</span>
+        </div>
+        <div class="item-desc">Quesadilla with rice and beans</div>
       </div>
     </div>
 
     <div id="dinner" class="menu-section">
       <div class="item">
         <div class="item-line">
-          <span class="item-title">CARNE ASADA PLATE</span><span>$12.99</span>
+          <span class="item-title">CARNE ASADA</span><span>$25.00</span>
         </div>
-        <div class="item-desc">Grilled steak with rice, beans, and tortillas</div>
+        <div class="item-desc">Charbroiled filets of skirt steak</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CARNE TAMPIQUENA</span><span>$29.00</span>
+        </div>
+        <div class="item-desc">Charbroiled filets of skirt steak with a chile relleno</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CARNE ASADA Y CAMARONES</span><span>$29.00</span>
+        </div>
+        <div class="item-desc">Charbroiled filets of skirt steak with sautéed shrimp</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">BEEF CARNITAS</span><span>$25.00</span>
+        </div>
+        <div class="item-desc">Beef strips grilled with onions, bell peppers, and tomatoes</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">TACOS AL CARBON</span><span>$25.00</span>
+        </div>
+        <div class="item-desc">Three soft corn tortillas stuffed with charbroiled steak, topped with pico de gallo and fresh cheese</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">POLLO EN CHIPOTLE</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">Tender sliced chicken breast cooked in a savory chipotle cream sauce</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">POLLO ASADO</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">Charbroiled chicken breast</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">FLAUTAS</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">Three deep fried flour or corn tortillas filled with chicken and cheese. Topped with lettuce, pico de gallo, sour cream, and fresh cheese</div>
       </div>
     </div>
 
     <div id="fajita" class="menu-section">
       <div class="item">
         <div class="item-line">
-          <span class="item-title">CHICKEN FAJITAS</span><span>$11.49</span>
+          <span class="item-title">FAJITAS</span><span>$25.00</span>
         </div>
-        <div class="item-desc">Served sizzling with onions and bell peppers</div>
+        <div class="item-desc">Steak, chicken, or veggies served over a bed of sautéed onions and green peppers. Served with lettuce, pico de gallo, cheese, sour cream, and tortillas</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">FAJITAS SUIZAS</span><span>$27.00</span>
+        </div>
+        <div class="item-desc">Steak or chicken served over a bed of sautéed onions, green peppers, and covered with melted Jack cheese. Served with lettuce, pico de gallo, cheese, sour cream, and tortillas</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SHRIMP FAJITAS</span><span>$28.00</span>
+        </div>
+        <div class="item-desc">Grilled shrimp served over a bed of sautéed onions and green peppers. Served with lettuce, pico de gallo, cheese, sour cream, and tortillas</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">FAJITAS TEXANAS</span><span>$29.00</span>
+        </div>
+        <div class="item-desc">Steak, chicken, and shrimp served over a bed of sautéed onions and green peppers. Served with lettuce, pico de gallo, cheese, sour cream, and tortillas</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">FAJITAS QUESADILLA</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">Grilled flour tortilla filled with melted cheese, and steak or chicken fajita meat. Served with lettuce, pico de gallo, and sour cream</div>
       </div>
     </div>
 
-    <div id="drinks" class="menu-section">
+    <div id="specials" class="menu-section">
       <div class="item">
         <div class="item-line">
-          <span class="item-title">HORCHATA</span><span>$2.50</span>
+          <span class="item-title">FISH TACOS MEAL</span><span>$20.00</span>
         </div>
-        <div class="item-desc">Sweet rice drink with cinnamon</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SINGLE FISH TACO</span><span>$7.00</span>
+        </div>
+        <div class="item-desc">Deep-fried cod filet served on two corn tortillas with chipotle sauce, lime, lettuce, and pico de gallo</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SHRIMP TACOS MEAL</span><span>$20.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SINGLE SHRIMP TACO</span><span>$7.00</span>
+        </div>
+        <div class="item-desc">Grilled shrimp served on two corn tortillas with chipotle sauce, lime, lettuce, and pico de gallo</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CALIFORNIA BURRITO</span><span>$15.00</span>
+        </div>
+        <div class="item-desc">A burrito filled with french fries, choice of meat, chipotle sauce, lettuce, pico de gallo, and cheese</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">MACHO BURRITO (WET BURRITO)</span><span>$17.00</span>
+        </div>
+        <div class="item-desc">A burrito filled with rice, beans, choice of meat, and covered with red sauce and cheese. Topped with lettuce, pico de gallo, sour cream, and fresh cheese</div>
       </div>
     </div>
 
-    <div id="dessert" class="menu-section">
+    <div id="meats" class="menu-section">
       <div class="item">
         <div class="item-line">
-          <span class="item-title">CHURROS</span><span>$3.00</span>
+          <span class="item-title">CARNE ASADA (Steak)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">POLLO (Grilled Chicken)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CARNITAS (Pulled Pork)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">AL PASTOR/ADOBADA (Spicy Pork)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHORIZO (Mexican Sausage)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CABEZA (Beef Head)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">LENGUA (Beef Tongue)</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">VEGGIE (Mixed Vegetables)</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="breakfast" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHILAQUILES</span><span>$17.00</span>
+        </div>
+        <div class="item-desc">Fried corn tortillas topped with green salsa, beans, onion, cilantro, sour cream, and fresh cheese. Add 2 eggs for $3.00</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHORIZO CON HUEVOS</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">Mexican sausage cooked with scrambled eggs and served with rice, beans, and tortillas</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">HUEVOS RANCHEROS</span><span>$20.00</span>
+        </div>
+        <div class="item-desc">A crispy corn tortilla topped with three over-easy eggs, covered with red sauce, and served with rice and beans</div>
+      </div>
+    </div>
+
+    <div id="desserts_drinks" class="menu-section">
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">CHURROS</span><span>$6.00</span>
         </div>
         <div class="item-desc">Fried dough pastries with sugar and cinnamon</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">JAMAICA</span><span>$3.00</span>
+        </div>
+        <div class="item-desc">Tart, refreshing hibiscus tea</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">HORCHATA</span><span>$3.00</span>
+        </div>
+        <div class="item-desc">Sweet, creamy rice drink with cinnamon</div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">COCA COLA</span><span>$4.50</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">TOPO CHICO MINERAL WATER</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SANGIRA SENORIAL SODA (non-alcoholic)</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">SQUIRT GRAPEFRUIT SODA</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">JARRITOS MANDARIN SODA</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">JARRITOS PINEAPPLE SODA</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">JARRITOS TAMARIND SODA</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">MUNDET APPLE SODA</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">DIET COKE</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">ARROWHEAD BOTTLED WATER</span><span>$2.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">LEMON LIME GATORADE</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">COOL BLUE GATORADE</span><span>$3.00</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-line">
+          <span class="item-title">FRUIT PUNCH GATORADE</span><span>$3.00</span>
+        </div>
       </div>
     </div>
   </div>
@@ -195,6 +480,17 @@
 
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
+
+      const subheader = document.getElementById('menu-subheader');
+        if (tabId === 'dinner') {
+          subheader.textContent = "*Dinner plates served with rice and beans";
+          subheader.style.display = "block";
+        } else if (tabId === 'fajita') {
+          subheader.textContent = "*Fajitas served with rice and beans";
+          subheader.style.display = "block";
+        } else {
+          subheader.style.display = "none"; // hide for other tabs
+        }
     }
 
     const slider = document.getElementById('slider');

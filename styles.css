@@ -782,6 +782,13 @@ nav a {
 
 /* MENU */
 
+.menu-subheader {
+  font-family: 'Aleo', sans-serif;
+  font-size: 15px; 
+  padding-bottom: 10px;
+  display: none;
+}
+
 .container {
   max-width: 800px;
   margin: 30px auto;
